@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "AddUser";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm())
+{
+    <div>My Html Form</div>
+}
+
+@*@using (Html.BeginForm("FindUser", "Home", FormMethod.Get))
+    {
+        <p>
+            Find by name: @Html.TextBox("userName", ViewBag.CurrentFilter as string)
+            <input type="submit" value="Search" />
+        </p>
+    }*@
+
+
+<div class="row">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">User Account:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="userName" placeholder="Enter user account name">
+            </div>
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-default">Search</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Firstname:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Lastname:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="lastName" placeholder="Enter Lastname">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-6">
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-6">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
